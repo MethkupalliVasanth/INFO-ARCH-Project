@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2016 at 07:56 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Dec 06, 2017 at 03:59 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -86,11 +88,11 @@ INSERT INTO `inventory` (`ItemId`, `CategoryId`, `SubCategoryId`, `Category`, `S
 (6, '2', '3', 'MakeUp', 'Lips', 'L.AGirl-Lipstick', 'About the Product L.A. GIRL Matte Flat Velvet Lipstick - Va Voom! PLUM', 100, 6, 'NA', 'NA', 'L.A Girl', 'Plum', 'images/makeup/lips/lagirl.jpg', 'images/makeup/lips/lagirlF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '6'),
 (7, '2', '3', 'MakeUp', 'Lips', 'MAC-Lipstick ', 'About the Product MAC Retro Matte Lipstick - Ruby Woo Description: Vivid bluish-red (Matte)', 100, 25, 'NA', 'NA', 'MAC', 'Ruby Woo', 'images/makeup/lips/mac.jpg', 'images/makeup/lips/macF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '25'),
 (8, '2', '3', 'MakeUp', 'Lips', 'Maybelline-Lipstick', 'About the Product:- (4 Pack) Maybelline ColorSensational Lipstick 100th Anniversary Limited Edition', 100, 20, 'NA', 'NA', 'Maybelline', 'Red', 'images/makeup/lips/maybelline.jpg', 'images/makeup/lips/maybellineF.jpg', 'Vaishali', 0, '0000-00-00', 0, '0000-00-00', '20'),
-(9, '3', '9', 'Hairs', 'Shampoo', 'Loreal-Shampoo', 'L''Oreal Professional Vitamino Color Shampoo gently cleanses color treated and highlighted hair. This formula works to keep your hair color vibrant and uses antioxidants and UV filters to prevent damage.', 100, 10, 'NA', 'NA', 'Loreal', 'Violet', 'images/hair/shampoo/loreal.jpg', 'images/hair/shampoo/lorealF.jpg', 'Vaishali', 0, '0000-00-00', 0, '0000-00-00', '10'),
+(9, '3', '9', 'Hairs', 'Shampoo', 'Loreal-Shampoo', 'L\'Oreal Professional Vitamino Color Shampoo gently cleanses color treated and highlighted hair. This formula works to keep your hair color vibrant and uses antioxidants and UV filters to prevent damage.', 100, 10, 'NA', 'NA', 'Loreal', 'Violet', 'images/hair/shampoo/loreal.jpg', 'images/hair/shampoo/lorealF.jpg', 'Vaishali', 0, '0000-00-00', 0, '0000-00-00', '10'),
 (10, '3', '9', 'Hairs', 'Shampoo', 'Ginger-Shampoo', 'Stop flakes and soothe your scalp using a gentle, yet effective shampoo with refreshing ginger for healthy, more manageable locks.\r\nGinger root, birch bark, white willow and oak moss, known for their astringent properties, help to promote a healthy scalp.\r\nCommunity Trade organic honey moisturizes and conditions hair and adds shine.\r\nPanthenol nourishes and strengthens hair, reducing breakage and split ends.', 100, 10, 'NA', 'NA', 'The Body Shop', 'Black', 'images/hair/shampoo/GingerShampoo.jpg', 'images/hair/shampoo/GingerShampooF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '10'),
 (11, '3', '9', 'Hairs', 'Shampoo', 'Gloss-Shampoo', 'GLOSS Moderne is Clean Luxury. Gentle on hair and the Planet, this collection avoids dangerous toxins and is 100% Sulfate-Free + Paraben-Free. \r\n\r\nQuintessential cleanser perfect for all hair types. Protects hair color and extends keratin treatments. A mini-shot of this go-to shampoo leaves hair shiny, clean and optimistic. It’s like pouring a million tiny champagne bubbles on your hair.', 100, 45, 'NA', 'NA', 'Gloss Moderne', 'Clear', 'images/hair/shampoo/Gloss.jpg', 'images/hair/shampoo/GlossF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '45'),
 (12, '3', '11', 'Hairs', 'Conditioner', 'Banana-Conditioner', 'This is hydrating banana conditioner', 100, 15, 'NA', 'NA', 'The Body Shop', 'Yellow', 'images/hair/conditioner/banana.jpg', 'images/hair/conditioner/bananaF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '15'),
-(13, '2', '2', 'MakeUp', 'Eyes', 'Mascara', 'A lengthening mascara that curls, volumizes, lifts, and separates lashes for an "out-of-here" lookâ€”now available in three vibrant shades', 100, 24, 'NA', 'NA', 'Benifits', 'Black', 'images/makeup/eyes/Mascara.jpg', 'images/makeup/eyes/MascaraF.jpg', 'vaishali', 0, '0000-00-00', 0, '0000-00-00', '24'),
+(13, '2', '2', 'MakeUp', 'Eyes', 'Mascara', 'A lengthening mascara that curls, volumizes, lifts, and separates lashes for an \"out-of-here\" lookâ€”now available in three vibrant shades', 100, 24, 'NA', 'NA', 'Benifits', 'Black', 'images/makeup/eyes/Mascara.jpg', 'images/makeup/eyes/MascaraF.jpg', 'vaishali', 0, '0000-00-00', 0, '0000-00-00', '24'),
 (14, '2', '2', 'MakeUp', 'Eyes', 'Eyelashes', 'A set with a pair of the bestselling Seductress lashes plus two mini lash adhesives in a travel-friendly gem case.', 200, 10, 'NA', 'NA', 'Velour', 'Black', 'images/makeup/eyes/Eyelash.jpg', 'images/makeup/eyes/EyelashF.jpg', 'vaishali', 0, '0000-00-00', 0, '0000-00-00', '10'),
 (15, '6', '21', 'Samples', 'Free Samples', 'Becca-Foundation', 'Aqua Luminous Perfecting Foundation. SIZE 1 ozA flexible, liquid foundation, made from pigments that blur and perfect to reflect your perfect skintone, for light, buildable coverage and a radiant finish. This product is an Allure Best of Beauty award winner.', 100, 0, 'NA', 'NA', 'Becca', 'Beige - light/medium w/neutral undertone', 'images/samples/becca.JPG', 'images/samples/beccaF.JPG', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '0'),
 (16, '2', '21', 'Samples', 'Free Samples', 'Versache Parfume', 'The primal power of woman is captured in this radiant, sensual essence. Attraction, desire, and passion intertwine in an alchemical mix of tempting, bright, and feminine notes. A refined accord of lemon and jasmine is exalted by sensual and smooth woods for a fragrance of strength, individuality, and seduction.   The bottle is crafted within the mythological codes of the Versace DNA. The gold Medusa and the Greek key design are engraved on the edge, stamping their imposing authority on the bottle.   â€œEros Pour Femme is the ultimate in power and seduction from Versace, from the captivating fragrance to the elegance of the bottle and the stunning campaign by Mert Alas and Marcus Piggott starring Lara Stone.â€â€”Donatella Versace, Chief Designer for Versace ', 100, 0, 'NA', 'NA', 'Versache', 'Clear', 'images/samples/versache.jpg', 'images/samples/versacheF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '0'),
@@ -117,7 +119,7 @@ INSERT INTO `inventory` (`ItemId`, `CategoryId`, `SubCategoryId`, `Category`, `S
 (37, '2', '1', 'MakeUp', 'Face', 'Armani-Foundation', 'This award-winning foundation is formulated with micro-fil technology, producing a low-density product that pairs high-impact pigments with weightless texture. Inspired by the silk shantung worn by kings and emperors, this foundation glides seamlessly onto the skin leaving a finish thatâ€™s reminiscent of charmeuse silk.', 100, 64, 'NA', 'NA', 'Armani', 'Beige with warm undertones', 'images/makeup/face/armaniFoundation.jpg', 'images/makeup/face/armaniFoundationF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '64'),
 (38, '2', '4', 'MakeUp', 'Nail', 'Dior-NailPaint', 'This advanced nail formula provides glassy, long-wearing shine. A precision brush applies the ideal amount of polish in a single sweep, allowing for a smooth application, vibrant color intensity, and a perfect finish. ', 100, 27, 'NA', 'NA', 'Dior', 'Mirage 338', 'images/makeup/nails/DiorNail.jpg', 'images/makeup/nails/DiorNailF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '27'),
 (39, '2', '4', 'MakeUp', 'Nail', 'Lakme-NailPaint', 'This advanced nail formula provides glassy, long-wearing shine. A precision brush applies the ideal amount of polish in a single sweep, allowing for a smooth application, vibrant color intensity, and a perfect finish. ', 100, 10, 'NA', 'NA', 'Lakme', 'Red', 'images/makeup/nails/LakmeNail.jpg', 'images/makeup/nails/LakmeNailF.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '10'),
-(40, '3', '10', 'Hairs', 'HairMask', 'Stri-HairMask', 'Ultimate Restore Deep Repair Mask starts at the scalp to restore essential hydration and dramatically improve the condition of overworked strands. Formulated with patented NIA-114 and Fibramend Ceramide Complex™, it reinforces natural cell cohesion in the hair and cuticle and restructures strands for improved resilience and vigor. This hair mask deeply nourishes for renewed shine, enhanced manageability, and increased softness—and it''s fragranced with notes of warm fig.	', 100, 20, 'NA', 'NA', 'StriVectin', 'White', 'images/hair/hairmask/strivectinhairmask.jpg', 'images/hair/hairmask/strivectinhairmask.jpg', 'Deepika', 0, '8888-09-09', 0, '8888-09-09', '20'),
+(40, '3', '10', 'Hairs', 'HairMask', 'Stri-HairMask', 'Ultimate Restore Deep Repair Mask starts at the scalp to restore essential hydration and dramatically improve the condition of overworked strands. Formulated with patented NIA-114 and Fibramend Ceramide Complex™, it reinforces natural cell cohesion in the hair and cuticle and restructures strands for improved resilience and vigor. This hair mask deeply nourishes for renewed shine, enhanced manageability, and increased softness—and it\'s fragranced with notes of warm fig.	', 100, 20, 'NA', 'NA', 'StriVectin', 'White', 'images/hair/hairmask/strivectinhairmask.jpg', 'images/hair/hairmask/strivectinhairmask.jpg', 'Deepika', 0, '8888-09-09', 0, '8888-09-09', '20'),
 (42, '3', '12', 'Hairs', 'Oil', 'Argan-Oil', 'This legendary, 100 percent pure Argan Oil is rich in vitamin E and essential fatty acids to deeply hydrate and nourish skin. Grown organically in Morocco, the multitasking formula contains astonishing healing, conditioning, and antiaging properties to create a nourished, youthful-looking complexion. It easily absorbs into skin, delivering a fresh, dewy glow, and keeps you looking beautiful from head to toe. Especially great for sensitive and acne-prone skin, it may also be used to treat split ends and soften cuticles.', 100, 37, 'NA', 'NA', 'Josie Maran', 'Grey', 'images/hair/oil/oil.jpg', 'images/hair/oil/oil.jpg', 'Deepika', 0, '0000-00-00', 0, '0000-00-00', '37');
 
 -- --------------------------------------------------------
@@ -137,12 +139,10 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`MenuId`, `MenuName`) VALUES
 ('', ''),
-('1', 'Skin'),
-('2', 'MakeUp'),
-('3', 'Hairs'),
-('4', 'Health Supplements'),
-('5', 'Fragrance'),
-('6', 'Samples');
+('1', 'Recipes'),
+('2', 'Handicrafts'),
+('3', 'Lifestyle'),
+('4', 'About Us');
 
 -- --------------------------------------------------------
 
@@ -447,21 +447,26 @@ ALTER TABLE `submenu`
 --
 ALTER TABLE `address`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `orderconfirmation`
 --
 ALTER TABLE `orderconfirmation`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+
 --
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
 --
 -- AUTO_INCREMENT for table `selleraddress`
 --
 ALTER TABLE `selleraddress`
   MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
