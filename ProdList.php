@@ -96,12 +96,12 @@ $i= $_GET["clicked"]; //Or do whatever you want
 
   <div id="site">
 
- <!-- start header -->
+<!-- start header -->
 <div class="top_bg">
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.php"><img src="images1/logo.png" alt="" height=125px width=150px;/></a>
+			<a href="index.php"><img src="images1/logo.jpg" alt="" height=125px width=150px;/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
@@ -231,17 +231,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
 					<label>Item Name</label>
 					<input type="text" name="item" class="field" />
 					
-					<label>Brand</label>
-					<input type="text" name="brand" class="field" />
 					
-					<label>Seller Name</label>
-					<input type="text" name="seller" class="field" />
-					
-					<label>Max Price</label>
-					<input type="text" name="maxP" class="field" />
-					
-					<label>Min Price</label>
-					<input type="text" name="minP" class="field" />
 					
 					
 							
@@ -278,13 +268,13 @@ $i= $_GET["clicked"]; //Or do whatever you want
 							$url1 .= "?" . 'itemid' . "=" . $ItemId;
 							
 							?>
-
-			             <li>
-								<div class="product-image" >
-									<a href=<?php echo $url1 ?>><img src=<?php echo $image ?> alt="" /></a>
-								</div>
+<!-- change Here -->		<li>
+								
+									
+							
 									<div class="product-description" data-name=<?php echo $prodname ?> data-price="<?php echo $priceU ?>">
 										<h3 class="product-name"><?php echo $prodname ?></h3>
+										<a href=<?php echo $url1 ?>><img src=<?php echo $image ?> alt="" /></a>
 										
 										<p class="product-desc"> <?php echo $desc ?></p>
 									</div>                       

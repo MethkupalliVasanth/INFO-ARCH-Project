@@ -114,7 +114,7 @@
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li class="hidden-xs"><a href="cart.php">My Cart</a></li>  
+					 
 					<!--  <li class="hidden-xs">Welcome <?php echo $_SESSION['username']; ?>,<a href="logout.php">Logout</a></li> -->
 		<li style="font-size:16px; color:white;" class="hidden-xs">	
 		<?php if(isset($_SESSION['username'])){
@@ -180,7 +180,7 @@
 						$sub_sql = "SELECT * FROM Submenu WHERE CatId=:MenuId";
 						$sub_stmt = $pdo->prepare($sub_sql);
 						$sub_stmt->bindParam(':MenuId',$row->MenuId,PDO::PARAM_INT);
-						$sub_stmt->execute();
+						$sub_stmt->execute();0
 						
 						?>
 						<li><a href=""><?php echo $row->MenuName; ?></a>
@@ -260,27 +260,13 @@
 						$prod_id = $_GET['itemid'];
 						echo "<a class='review-link' href='review.php?itemid=" .$prod_id. "'> Reviews and Ratings</a>";
 					?>
-                    <div class="aa-price-block">
-                      <br><strong style="color:#57C5A0">Price: </strong><span class="product-price">$ <?php echo $priceU ?></span></br>
-                      <p class="aa-product-avilability"><br><strong style="color:#57C5A0">Availability (No.of Units in Stock): </strong><span><?php echo $totalQuantity ?></span></p>
-					  <br><strong style="color:#57C5A0">Seller: </strong><span class="product-seller"> <?php echo $seller ?></span></br>
-					  <br><strong style="color:#57C5A0">Discount:</strong> <span class="product-discount"> <?php echo $discount ?></span></br>
-					  <br><strong style="color:#57C5A0">Promo: </strong><span class="product-promo"> <?php echo $promo ?></span></br>
-                    </div>
+          
 					<p><br><strong style="color:#57C5A0">Description </strong></br></p>
                     <p> <?php echo $description ?></p>
                     
                     
 								<br>
 								<div class="product-description" data-name=<?php echo $prodname ?> data-price="<?php echo $priceU ?>">
-										<form class="add-to-cart" action="cart.php" method="post">
-											<div>
-												<label for="qty-1"><strong style="color:#57C5A0">Quantity</strong></label>
-												<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-											</div>
-											<br>
-											<p><input type="submit" value="Add to cart" class="btn" /></p>
-										</form>
 								</div>
                   </div>
 				  
