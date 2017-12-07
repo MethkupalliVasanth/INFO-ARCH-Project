@@ -145,7 +145,7 @@
             
         </div>
 
-        	<footer id="aa-footer">
+<footer id="aa-footer">
     <!-- footer bottom -->
     <div class="aa-footer-top">
      <div class="container">
@@ -178,8 +178,8 @@
                     <h3>Contact Us</h3>
                     <address>
                       <p> 107 S Indiana Ave, Bloomington, IN 47405</p>
-                      <p><span class="fa fa-phone"></span>+1 812-349-8724</p>
-                      <p><span class="fa fa-envelope"></span>staybeautiful@gmail.com</p>
+                      <p><span class="fa fa-phone"></span>+1 812-955-1456</p>
+                      <p><span class="fa fa-envelope"></span>everythingIndian@gmail.com</p>
                     </address>
                     
                   </div>
@@ -197,7 +197,7 @@
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Group 1</a></p>
+            <p>Designed by Myrmidons</a></p>
             
           </div>
         </div>

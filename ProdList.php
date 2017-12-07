@@ -96,41 +96,33 @@ $i= $_GET["clicked"]; //Or do whatever you want
 
   <div id="site">
 
-  <!-- start header -->
+ <!-- start header -->
 <div class="top_bg">
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.php"><img src="images1/logo.jpg" alt="" height=125px width=150px;/></a>
+			<a href="index.php"><img src="images1/logo.png" alt="" height=125px width=150px;/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li class="hidden-xs"><a href="cart.php">My Cart</a></li>  
-					<!--  <li class="hidden-xs">Welcome <?php echo $_SESSION['username']; ?>,<a href="logout.php">Logout</a></li> -->
-		<li style="font-size:16px; color:white;" class="hidden-xs">	
-		<?php if(isset($_SESSION['username'])){
-		echo "Welcome ";
-		echo $_SESSION['username'];
-		
-		echo ',';
-		echo "<a style='color:white' href=logout.php>Logout</a>";
-			}
-		else if(isset($_SESSION['sellername']))
-		{
-		echo "Welcome ";
-						echo $_SESSION['sellername'];
+					
+                
+                  <li style="font-size:16px; color:white;" class="hidden-xs">	
+						<?php if(isset($_SESSION['username'])){
+						echo "Welcome ";
+						echo $_SESSION['username'];
 						echo ',';
 						echo "<a style='color:white' href=logout.php>Logout</a>";
-			
-		}	
-		else {
-			echo "<a style='color:white' href=login.php>Login</a>";
-			} ?> </li> 
+							}else{
+							echo "<a style='color:white' href=login.php>Login</a>";
+					} ?> </li>
+												   
+					<div class="clear"></div>
 				</ul>
 		</div>	
 		<div class="web_search">
 		 	<form action="SearchResult.php" method="post" id="searchForm">
-                  <input type="text" name="q" id="searchbox" placeholder="Search here ex. 'MakeUp' " maxlength="25" >
+                  <input type="text" name="q" id="searchbox" placeholder="Search here for anything" maxlength="25" >
                   <button type="submit" >Go!<span class="fa fa-search"></span></button>
                 </form>
 	    </div>						
@@ -320,8 +312,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
   </section>
   <div>
   
-  <!-- footer -->  
-  <footer id="aa-footer">
+<footer id="aa-footer">
     <!-- footer bottom -->
     <div class="aa-footer-top">
      <div class="container">
@@ -340,7 +331,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
                     <h3>Useful Links</h3>
                     <ul class="aa-footer-nav">
                       <li><a href="index.php">Home</a></li>
-                      
+                                            
                       <li><a href="customer-support.php">Customer Support</a></li>
                       
                     </ul>
@@ -354,8 +345,8 @@ $i= $_GET["clicked"]; //Or do whatever you want
                     <h3>Contact Us</h3>
                     <address>
                       <p> 107 S Indiana Ave, Bloomington, IN 47405</p>
-                      <p><span class="fa fa-phone"></span>+1 812-349-8724</p>
-                      <p><span class="fa fa-envelope"></span>staybeautiful@gmail.com</p>
+                      <p><span class="fa fa-phone"></span>+1 812-955-1456</p>
+                      <p><span class="fa fa-envelope"></span>everythingIndian@gmail.com</p>
                     </address>
                     
                   </div>
@@ -373,7 +364,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Group 1</a></p>
+            <p>Designed by Myrmidons</a></p>
             
           </div>
         </div>
@@ -382,7 +373,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
     </div>
   </footer>
   <!-- / footer -->
- 
+
   
 
   <!-- jQuery library -->

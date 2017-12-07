@@ -1,6 +1,5 @@
 <?php 
 
-
 	$db_host = "localhost"; 
 	$db_username = "root";   
 	$db_pass = "";  
@@ -8,6 +7,7 @@
 	 
 	$conn=mysqli_connect("$db_host","$db_username","$db_pass") or die ("could not connect to mysql");
 	mysqli_select_db($conn,"$db_name") or die ("no database");
+	
 	
 	$db_host = "localhost"; 
 	$db_username = "root";   
@@ -21,20 +21,43 @@
 	mysqli_select_db($conn1,"$db_name") or die ("no database");
 	
 	
-	$query="Select ProductName,ImageLink,ItemId,Description FROM Inventory where ItemId={$_GET['itemid']} limit 1";
-	$result = mysqli_query($conn,$query);
-	$value = mysqli_fetch_object($result);
-    
-	$prodname=$value->ProductName;
-	$image=$value->ImageLink;
-	$description=$value->Description;
+	
+	if (isset($_POST['q']) && $_POST['q']!="")
+	{
+		$searchq=$_POST['q'];
+		$searchq=preg_replace("#[^0-9a-z]#i","",$searchq);
+		
+	}
+	else if (isset($_POST['key']) && $_POST['key']!="" )
+	{
+		$searchq=$_POST['key'];
+		$searchq=preg_replace("#[^0-9a-z]#i","",$searchq);
+		
+	}
+	else if (isset($_POST['item'])&& $_POST['item']!="" )
+	{
+		$searchq=$_POST['item'];
+		$searchq=preg_replace("#[^0-9a-z]#i","",$searchq);
+		
+	}
+	else if (isset($_POST['brand'])&& $_POST['brand']!="" )
+	{
+		$searchq=$_POST['brand'];
+		$searchq=preg_replace("#[^0-9a-z]#i","",$searchq);
+		
+	}
+	else if (isset($_POST['seller']) && $_POST['seller']!="")
+	{
+		$searchq=$_POST['seller'];
+		$searchq=preg_replace("#[^0-9a-z]#i","",$searchq);
+		
+	}
 	
 	
-							
-							
-				
 	
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -43,42 +66,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>StayBeautiful | Product Description</title>
+    <title>StayBeautiful | Home</title>
     
-    <!-- Font awesome -->
     
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">   
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
     <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
-    <!-- Product view slider -->
-    <link rel="stylesheet" type="text/css" href="css/jquery.simpleLens.css">    
+    
+	<!-- sidebar -->
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
     
     <!-- Theme color -->
     <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">
     <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
 
     <!-- Main style sheet -->
-    <link href="css/style1.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet">    
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
-	<link href="css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     
-    <script src="js/star-rating.min.js" type="text/javascript"></script>
-
-	<style>
-	
-	.review-link{
-	font-size: 20px;
-	}
-	
-	</style>
-	
-	<link href="css1/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css1/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css1/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--- start-mmmenu-script---->
 <script src="js1/jquery.min.js" type="text/javascript"></script>
@@ -90,9 +100,21 @@
 				$('nav#menu-left').mmenu();
 			});
 		</script>
-	
+  
+  
+<style>
+	label {
+		
+		width: 10em;
+		margin-right: 1em;
+		text-align: right;
+		}
+</style
   </head>
+  
+  
   <body> 
+  
    <!-- wpf loader Two -->
     <div id="wpf-loader-two">          
       <div class="wpf-loader-two-inner">
@@ -101,45 +123,38 @@
     </div> 
     <!-- / wpf loader Two -->       
   <!-- SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i>Top</a>
   <!-- END SCROLL TOP BUTTON -->
 
-	<div id="site">
+  <div id="site">
+
   <!-- start header -->
 <div class="top_bg">
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.php"><img src="images1/logo.jpg" alt="" height=125px width=150px;/></a>
+			<a href="index.php"><img src="images1/logo.png" alt="" height=125px width=150px;/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li class="hidden-xs"><a href="cart.php">My Cart</a></li>  
-					<!--  <li class="hidden-xs">Welcome <?php echo $_SESSION['username']; ?>,<a href="logout.php">Logout</a></li> -->
-		<li style="font-size:16px; color:white;" class="hidden-xs">	
-		<?php if(isset($_SESSION['username'])){
-		echo "Welcome ";
-		echo $_SESSION['username'];
-		
-		echo ',';
-		echo "<a style='color:white' href=logout.php>Logout</a>";
-			}
-		else if(isset($_SESSION['sellername']))
-		{
-		echo "Welcome ";
-						echo $_SESSION['sellername'];
+					
+                
+                  <li style="font-size:16px; color:white;" class="hidden-xs">	
+						<?php if(isset($_SESSION['username'])){
+						echo "Welcome ";
+						echo $_SESSION['username'];
 						echo ',';
 						echo "<a style='color:white' href=logout.php>Logout</a>";
-			
-		}	
-		else {
-			echo "<a style='color:white' href=login.php>Login</a>";
-			} ?> </li> 
+							}else{
+							echo "<a style='color:white' href=login.php>Login</a>";
+					} ?> </li>
+												   
+					<div class="clear"></div>
 				</ul>
 		</div>	
 		<div class="web_search">
 		 	<form action="SearchResult.php" method="post" id="searchForm">
-                  <input type="text" name="q" id="searchbox" placeholder="Search here ex. 'MakeUp' " maxlength="25" >
+                  <input type="text" name="q" id="searchbox" placeholder="Search here for anything" maxlength="25" >
                   <button type="submit" >Go!<span class="fa fa-search"></span></button>
                 </form>
 	    </div>						
@@ -226,75 +241,123 @@
 </div>
 
   <!-- / menu -->
-  <!-- Product Description-->
-  <div id="site">
-    <section id="aa-product-details">
+    
+  <!-- Products section -->
+  <section id="aa-product">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="aa-product-details-area">
-            <div class="aa-product-details-content">
+          <div class="row">
+            <div class="aa-product-area">
 			
-              <div class="row">
-                <!-- Modal view slider -->
-                <div class="col-md-5 col-sm-5 col-xs-12">                              
-                  <div class="aa-product-view-slider">                                
-                    <div id="demo-1" class="simpleLens-gallery-container">
-                      <div class="simpleLens-container">
-                        <div class="simpleLens-big-image-container"><a data-lens-image=<?php echo $image ?> class="simpleLens-lens-image"><img src=<?php echo $image ?> class="simpleLens-big-image"></a></div>
-                      </div>
-                      <div class="simpleLens-thumbnails-container">
-                                                            
-                          
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal view content -->
-				
-                <div class="col-md-7 col-sm-7 col-xs-12">
-                  <div class="aa-product-view-content">
+			<!-- Sidebar -->
+			<div id="sidebar">
+			  <!-- Search -->
+			  <div class="box search">
+				<h2>Filter by <span></span></h2>
+				<div class="box-content">
+				  <form action="SearchResult.php" method="post">
+					<label>Keyword</label>
+					<input type="text" name="key" class="field" />
 					
-                    <h2 class ="product-name"><strong style="color:#57C5A0"><?php echo $prodname ?></strong></h2>
-					<?php
-						$prod_id = $_GET['itemid'];
-						echo "<a class='review-link' href='review.php?itemid=" .$prod_id. "'> Reviews and Ratings</a>";
-					?>
-                    <div class="aa-price-block">
-                      <br><strong style="color:#57C5A0">Price: </strong><span class="product-price">$ <?php echo $priceU ?></span></br>
-                      <p class="aa-product-avilability"><br><strong style="color:#57C5A0">Availability (No.of Units in Stock): </strong><span><?php echo $totalQuantity ?></span></p>
-					  <br><strong style="color:#57C5A0">Seller: </strong><span class="product-seller"> <?php echo $seller ?></span></br>
-					  <br><strong style="color:#57C5A0">Discount:</strong> <span class="product-discount"> <?php echo $discount ?></span></br>
-					  <br><strong style="color:#57C5A0">Promo: </strong><span class="product-promo"> <?php echo $promo ?></span></br>
+					<label>Item Name</label>
+					<input type="text" name="item" class="field" />
+					
+					<label>Brand</label>
+					<input type="text" name="brand" class="field" />
+					
+					<label>Seller Name</label>
+					<input type="text" name="seller" class="field" />
+					
+					<label>Max Price</label>
+					<input type="text" name="maxP" class="field" />
+					
+					<label>Min Price</label>
+					<input type="text" name="minP" class="field" />
+					
+					
+							
+					<input type="submit" class="search-submit" value="Search" />
+					</form>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+              <div class="aa-product-inner">
+                <!-- start prduct navigation -->
+                 <br>
+                  <!-- Tab panes -->
+                  <div id="content">
+					<div id="products">
+                      <ul >
+									
+                          
+                          
+                        
+                        <!-- start single product item -->
+                        <?php
+						
+							
+							
+							$query=mysqli_query($conn,"Select * FROM Inventory WHERE Category LIKE '%$searchq%' OR SubCategory LIKE '%$searchq%' OR ProductName LIKE '%$searchq%' OR Description LIKE '%$searchq%'");
+							
+							$num_rows=mysqli_num_rows($query);
+							while ($row=mysqli_fetch_array($query))
+							{
+								$prodname=$row['ProductName'];
+								$image=$row['ImageLink'];
+								$ItemId=$row['ItemId'];
+								$url1='Prod_Desc.php';
+								$url1 .= "?" . 'itemid' . "=" . $ItemId;
+								
+								?>
+
+							 <li>
+									<div class="product-image" >
+										<a href=<?php echo $url1 ?>><img src=<?php echo $image ?> alt="" /></a>
+									</div>
+										<div class="product-description" data-name=<?php echo $prodname ?> data-price="<?php echo $priceU ?>">
+											<h3 class="product-name"><?php echo $prodname ?></h3>
+											<p class="product-price">$ <?php echo $priceU ?></p>
+											<form class="add-to-cart" action="cart.php" method="post">
+												<div>
+													<label for="qty-1">Quantity</label>
+													<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+												</div>
+												<p><input type="submit" value="Add to cart" class="btn" /></p>
+											</form>
+										</div>                       
+							  
+							  </li>
+						
+						  
+						  <?php
+						}
+						
+						
+						?>
+                          
+                        
+                      </ul>
+                      <a class="aa-browse-btn" href="Search.php">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
                     </div>
-					<p><br><strong style="color:#57C5A0">Description </strong></br></p>
-                    <p> <?php echo $description ?></p>
                     
-                    
-								<br>
-								<div class="product-description" data-name=<?php echo $prodname ?> data-price="<?php echo $priceU ?>">
-										<form class="add-to-cart" action="cart.php" method="post">
-											<div>
-												<label for="qty-1"><strong style="color:#57C5A0">Quantity</strong></label>
-												<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-											</div>
-											<br>
-											<p><input type="submit" value="Add to cart" class="btn" /></p>
-										</form>
-								</div>
-                  </div>
-				  
-                </div>
-				
+                            
+                     
+                             
               </div>
             </div>
-			</div></div></div></div>
-			</section>
-			
-            
-  <!-- /Product Description-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div>
   
-<footer id="aa-footer">
+ 	<footer id="aa-footer">
     <!-- footer bottom -->
     <div class="aa-footer-top">
      <div class="container">
@@ -355,31 +418,8 @@
     </div>
   </footer>
   <!-- / footer -->
-
-
-  <!-- Login Modal -->  
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">                      
-        <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Login or Register</h4>
-          <form class="aa-login-form" action="">
-            <label for="">Username or Email address<span>*</span></label>
-            <input type="text" placeholder="Username or email">
-            <label for="">Password<span>*</span></label>
-            <input type="password" placeholder="Password">
-            <button class="aa-browse-btn" type="submit">Login</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
-            <div class="aa-register-now">
-              Don't have an account?<a href="BuyerRegistration.php">Register now!</a>
-            </div>
-          </form>
-        </div>                        
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>    
+ 
+  
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -394,12 +434,12 @@
   <script type="text/javascript" src="js/jquery.simpleLens.js"></script>
   <!-- slick slider -->
   <script type="text/javascript" src="js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="js/nouislider.js"></script>
+  
   <!-- Custom js -->
   <script src="js/custom.js"></script> 
   <!-- Add to cart Jquery -->
-  <script type="text/javascript" src="js/jquery.shop.js"></script> 
+  <script type="text/javascript" src="js/jquery.shop.js"></script>  
 
   </body>
 </html>
+
