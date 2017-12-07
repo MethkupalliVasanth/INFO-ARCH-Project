@@ -21,7 +21,7 @@ if (isset($_POST['submit']))
 		$userid=$row['userid'];
 		$username=$row['username'];
 //echo "<a href=BuyerDashboard.php?user_id=$userid>Product Details</a>";
-        header("Location: BDashboard.php?user_id=$userid"); //change this
+        header("Location: index.php?user_id=$userid"); //change this
 		//$pid=$nt[product_id];
 //echo "<a href=product-detail.php?product_id=$pid>Product Details</a>";
     }

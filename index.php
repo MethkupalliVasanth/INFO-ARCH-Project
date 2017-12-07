@@ -27,7 +27,7 @@ session_start();
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>StayBeautiful | Home</title>
+<title>EverythingIndian | Home</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
@@ -89,11 +89,11 @@ session_start();
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.php"><img src="images1/logo.jpg" alt="" height=125px width=150px;/></a>
+			<a href="index.php"><img src="images1/logo.png" alt="" height=125px width=150px;/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li class="hidden-xs"><a href="cart.php">My Cart</a></li>
+					
                 
                   <li style="font-size:16px; color:white;" class="hidden-xs">	
 						<?php if(isset($_SESSION['username'])){
@@ -110,7 +110,7 @@ session_start();
 		</div>	
 		<div class="web_search">
 		 	<form action="SearchResult.php" method="post" id="searchForm">
-                  <input type="text" name="q" id="searchbox" placeholder="Search here ex. 'MakeUp' " maxlength="25" >
+                  <input type="text" name="q" id="searchbox" placeholder="Search here for anything" maxlength="25" >
                   <button type="submit" >Go!<span class="fa fa-search"></span></button>
                 </form>
 	    </div>						
@@ -196,7 +196,6 @@ session_start();
 </div>
 </div>
 
-
 <!-- start slider -->
 <div class="slider" style="float:center">
 				<!---start-image-slider---->
@@ -205,52 +204,20 @@ session_start();
                 <div id="ei-slider" class="ei-slider">
                     <ul class="ei-slider-large">
 						<li>
-                            <img src="" alt="image06"/>
-                            <div class="ei-title1">
-                            	<h3 class="btn">$80.99</h3>
-                                <h2>Gloss Moderne<br>	High-Gloss Shampoo</h2>
-                                <h3 class="active">Luxury haircare with technically advanced<br>
-                                	ultra-prestige formulations with unparalleled efficacy.
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_1.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_2.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_3.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_4.png" alt=""></a>
-                                </h3>
-                            </div>
+                            <img src="images/carousel/yoga.jpg" alt="image06"/>
+                         
                         </li>
                         <li>
-                            <img src="" alt="image01" />
-                            <div class="ei-title2">
-                            	<h3 class="btn">$44.99</h3>
-                                <h2>Dior <br>Diorshow Mascara	</h2>
-                                <h3 class="active">A bestselling mascara with conditional formula<br>
-                                	enriched with icrofibres for lash extension.
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_1.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_2.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_3.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_4.png" alt=""></a>
-                                </h3>
-                            </div>
+                            <img src="images/carousel/biryani.jpg" alt="image01" />
+
                         </li>
                         <li>
-                            <img src="" alt="image02" />
-                            <div class="ei-title">
-                            	<h3 class="btn">$19.45</h3>
-                                <h2>Deborah Lippmann <br>Iconic Treatment-enriched Nail Polish</h2>
-                                <h3 class="active">Infused with treatment benefits from ingredients<br>
-                                	such as biotin, green tea extract and aucoumea.
-                                </h3>
-                                <h3>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_1.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_2.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_3.png" alt=""></a>
-                                	<a class="ei_icons" href="#"><img src="images1/icon_4.png" alt=""></a>
-                                </h3>
-                            </div>
+                            <img src="images/carousel/konda.jpg" alt="image02" />
+                          
+                        </li>
+                        <li>
+                            <img src="images/carousel/astrology.jpg" alt="image02" />
+                           
                         </li>
                        
                     </ul><!-- ei-slider-large -->
@@ -258,40 +225,39 @@ session_start();
                         <li class="ei-slider-element">Current</li>
 						<li>
 							<a href="#">
-								<span class="active">High Gloss Shampoo</span>
-								<p>now of $80.99</p> 
+								<span class="active">Yoga</span>
+								<p>A way of life</p> 
 							</a>
-							<img src="images1/slider/img1.jpg" alt="thumb01" />
+							<img src="images/carousel/yoga.jpg" alt="thumb01" />
 						</li>
-                        <li class="hide"><a href="#"><span>Diorshow Mascara</span><p>Winter is coming</p> </a><img src="images1/slider/img2.jpg" alt="thumb01" /></li>
-                        <li  class="hide1"><a href="#"><span>Deborah Nail Polish</span><p>Limited edition</p></a><img src="images1/slider/img3.jpg" alt="thumb02" /></li>
-                        <li class="hide1"><a href="#"><span>Obsession Liquid Lipstick</span><p>All colors available</p> </a><img src="images1/slider/img4.png" alt="thumb03" /></li>
-                        <li><a href="#"><span>Shade+Light Contour Brush</span><p>Free samples</p> </a><img src="images1/slider/img5.jpg" alt="thumb04" /></li>
-                        <li><a href="#"><span>Silk Foundation</span><p>Limited edition</p> </a><img src="images1/slider/img6.jpg" alt="thumb05" /></li>
-                        <li><a href="#"><span>NARS Audacious Lipstick</span><p>All colors available</p> </a><img src="images1/slider/img7.jpg" alt="thumb07" /></li>
+                        <li class="hide1"><a href="#"><span>Hyderabadi biryani</span><p>Lipsmacking and South Indian favorite</p> </a><img src="images/carousel/biryani.jpg" alt="thumb01" /></li>
+                        <li  class="hide1"><a href="#"><span>Handicrafts</span><p>Kondapalli Toys</p></a><img src="images/carousel/konda.jpg" alt="thumb02" /></li>
+                        <li class="hide1"><a href="#"><span>Astrology</span><p>Know your signs</p> </a><img src="images/carousel/astrology.jpg" alt="thumb03" /></li>
+                       
                     </ul><!-- ei-slider-thumbs -->
                 </div><!-- ei-slider -->
             </div><!-- wrapper -->
 		</div>
 		<!---End-image-slider---->	
 </div>
+
 <!-- start image1_of_3 -->
 <div class="top_bg">
 <div class="wrap">
-<h2 style="color:white">Featured Products</h2>
+<h2 style="color:white">New Recipes</h2>
 <div class="main1">
 	
 	<div class="image1_of_3">
-		<img src="images1/img1.jpg" alt=""/>
-	    <a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=1"><span class="tag">on sale - 50% Off</span></a>
+		<img src="images1/butterchicken.jpg" alt=""/>
+	    <a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=1"><span class="tag">North Indian</span></a>
 	</div>
 	<div class="image1_of_3">
-		<img src="images1/img2.jpg" alt=""/>
-		<a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=2"><span class="tag">special offers-20% Off</span></a>
+		<img src="images1/dosa.jpg" alt=""/>
+		<a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=2"><span class="tag"> South Indian</span></a>
 	</div>
 	<div class="image1_of_3">
-		<img src="images1/img3.jpg" alt=""/>
-		<a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=3"><span class="tag">must have</span></a>
+		<img src="images1/vadapav.jpg" alt=""/>
+		<a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=3"><span class="tag">Far West</span></a>
 	</div>
 	<div class="clear"></div>
 </div>
@@ -300,13 +266,12 @@ session_start();
 
 
     <ul id="slides">
-	<li class="slide"><img src="images1/carousel/2.jpg" width="100%" height="300"></li>
-    <li class="slide showing"><img src="images1/carousel/1.png" width="100%" height="300"></li>
-    <li class="slide"><img src="images1/carousel/3.jpg" width="100%" height="300"></li>
-    <li class="slide"><img src="images1/carousel/4.png" width="100%" height="300"></li>
-    <li class="slide"><img src="images1/carousel/5.jpg" width="100%" height="300"></li>
-	<li class="slide"><img src="images1/carousel/6.jpg" width="100%" height="300"></li>
-	<li class="slide"><img src="images1/carousel/7.jpg" width="100%" height="300"></li>
+	<li class="slide"><img src="images1/carousel/8.jpg" width="100%" height="600" ></li>
+    <li class="slide"><img src="images1/carousel/9.jpg" width="100%" height="600"></li>
+    <li class="slide"><img src="images1/carousel/10.jpg" width="100%" height="600"></li>
+    <li class="slide"><img src="images1/carousel/11.jpg" width="100%" height="600"></li>
+    <li class="slide"><img src="images1/carousel/12.jpg" width="100%" height="600"></li>
+
 	
 	</ul>
 	<script type="text/javascript">
@@ -376,7 +341,7 @@ function nextSlide() {
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Group 1</a></p>
+            <p>Designed by Myrmidons</a></p>
             
           </div>
         </div>
