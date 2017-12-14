@@ -157,7 +157,7 @@ a.button {
 		</label><br>
 		
 		<label>Your Email : <br>
-		<input type="email" name="email" id="email" required="required" placeholder="john123@gmail.com"/><br/>
+		<input type="email" name="email" id="email" required="required" placeholder="name@gmail.com"/><br/>
 		</label><br>
 		
 		<label>Your Review :

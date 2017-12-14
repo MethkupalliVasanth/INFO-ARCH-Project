@@ -488,8 +488,10 @@ session_start();
 		}
 		
 		
+		$updatedprice =  $_POST['Price'] - ($_POST['DiscountPercent']/100)*($_POST['Price']);
+		
 		$sql = "INSERT INTO Inventory (ItemId, CategoryId, SubCategoryId, Category, SubCategory, Productname, Description, ImageLink, SubDescription)
-		VALUES ('".$_POST["ItemId"]."', '".$_POST["CategoryId"]."', '".$_POST["SubCategoryId"]."', '".$_POST["Category"]."', '".$_POST["SubCategory"]."', '".$_POST["ProductName"]."', '".$_POST["Description"]."',  '".$_POST["ImageLink"]."', '".$_POST["SubDescription"]."' ;
+		VALUES ('".$_POST["ItemId"]."', '".$_POST["CategoryId"]."', '".$_POST["SubCategoryId"]."', '".$_POST["Category"]."', '".$_POST["SubCategory"]."', '".$_POST["ProductName"]."', '".$_POST["Description"]."', '".$_POST["ImageLink"]."', '".$_POST["SubDescription"]."')";
 		
 		
 		if($conn->query($sql) == TRUE){
@@ -498,7 +500,6 @@ session_start();
 		else{
 			echo "<script type= 'text/javascript'>alert('Error: " .$sql. "<br>" .$conn->error."');</script>";
 		}
-		
 		
 		
 		

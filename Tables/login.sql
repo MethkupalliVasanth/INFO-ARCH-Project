@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2017 at 03:58 AM
+-- Generation Time: Dec 14, 2017 at 04:41 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -67,7 +67,7 @@ CREATE TABLE `members1` (
 --
 
 INSERT INTO `members1` (`userid`, `firstname`, `lastname`, `username`, `password`, `secretquestion`, `secretanswer`, `address`, `city`, `state`, `zip`, `phone`, `email`) VALUES
-(14, 'Deepikaa', 'Bajpai', 'dbajpai', 'hello', 'What is your Mothers Maiden Name?', 'sneh', '7921 Camino Glorita', 'San Diego', 'California', '47409', '8123498733', 'dbajpai@iu.edu');
+(15, 'Niteesh Kumar', 'Akurati', 'Niteesh01', 'qwerty123', 'What is your Mothers Maiden Name?', 'padavala', '804 N Woodbridge Drive', 'Bloomington', 'IN', '47408', '7044960670', 'niteesh@iu.edu');
 
 --
 -- Indexes for dumped tables
@@ -87,7 +87,7 @@ ALTER TABLE `members1`
 -- AUTO_INCREMENT for table `members1`
 --
 ALTER TABLE `members1`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

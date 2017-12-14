@@ -66,7 +66,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>StayBeautiful | Home</title>
+    <title>EverythingIndian | Home</title>
     
     
     <!-- Bootstrap -->
@@ -227,7 +227,7 @@
 			
 			
 				?>
-				<li><a href="customer-support.php">Customer Support</a></li>
+				
 			</ul>
 			
               
@@ -262,18 +262,6 @@
 					
 					<label>Item Name</label>
 					<input type="text" name="item" class="field" />
-					
-					<label>Brand</label>
-					<input type="text" name="brand" class="field" />
-					
-					<label>Seller Name</label>
-					<input type="text" name="seller" class="field" />
-					
-					<label>Max Price</label>
-					<input type="text" name="maxP" class="field" />
-					
-					<label>Min Price</label>
-					<input type="text" name="minP" class="field" />
 					
 					
 							
@@ -319,16 +307,8 @@
 									<div class="product-image" >
 										<a href=<?php echo $url1 ?>><img src=<?php echo $image ?> alt="" /></a>
 									</div>
-										<div class="product-description" data-name=<?php echo $prodname ?> data-price="<?php echo $priceU ?>">
+										<div class="product-description" data-name=<?php echo $prodname ?>>
 											<h3 class="product-name"><?php echo $prodname ?></h3>
-											<p class="product-price">$ <?php echo $priceU ?></p>
-											<form class="add-to-cart" action="cart.php" method="post">
-												<div>
-													<label for="qty-1">Quantity</label>
-													<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-												</div>
-												<p><input type="submit" value="Add to cart" class="btn" /></p>
-											</form>
 										</div>                       
 							  
 							  </li>
@@ -377,7 +357,6 @@
                     <ul class="aa-footer-nav">
                       <li><a href="index.php">Home</a></li>
                                             
-                      <li><a href="customer-support.php">Customer Support</a></li>
                       
                     </ul>
                   </div>

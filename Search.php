@@ -1,5 +1,6 @@
 <?php 
 
+
 	$db_host = "localhost"; 
 	$db_username = "root";   
 	$db_pass = "";  
@@ -7,7 +8,7 @@
 	 
 	$conn=mysqli_connect("$db_host","$db_username","$db_pass") or die ("could not connect to mysql");
 	mysqli_select_db($conn,"$db_name") or die ("no database");
-	
+
 	
 	$db_host = "localhost"; 
 	$db_username = "root";   
@@ -21,9 +22,6 @@
 	mysqli_select_db($conn1,"$db_name") or die ("no database");
 	
 	
-	
-	
-
 ?>
 
 
@@ -55,7 +53,6 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     
-
 	<link href="css1/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css1/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!--- start-mmmenu-script---->
@@ -68,7 +65,8 @@
 				$('nav#menu-left').mmenu();
 			});
 		</script>
-<style>
+  
+	<style>
 	label {
 		
 		width: 10em;
@@ -76,11 +74,8 @@
 		text-align: right;
 		}
 </style
+
   </head>
- <?php
-$i= $_GET["clicked"]; //Or do whatever you want
-?>
- 
   <body> 
   
    <!-- wpf loader Two -->
@@ -94,9 +89,9 @@ $i= $_GET["clicked"]; //Or do whatever you want
     <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i>Top</a>
   <!-- END SCROLL TOP BUTTON -->
 
-  <div id="site">
+  
 
-<!-- start header -->
+  <!-- start header -->
 <div class="top_bg">
 <div class="wrap">
 	<div class="header">
@@ -105,24 +100,31 @@ $i= $_GET["clicked"]; //Or do whatever you want
 		</div>
 		 <div class="log_reg">
 				<ul>
-					
-                
-                  <li style="font-size:16px; color:white;" class="hidden-xs">	
-						<?php if(isset($_SESSION['username'])){
-						echo "Welcome ";
-						echo $_SESSION['username'];
+					<!--  <li class="hidden-xs">Welcome <?php echo $_SESSION['username']; ?>,<a href="logout.php">Logout</a></li> -->
+		<li style="font-size:16px; color:white;" class="hidden-xs">	
+		<?php if(isset($_SESSION['username'])){
+		echo "Welcome ";
+		echo $_SESSION['username'];
+		
+		echo ',';
+		echo "<a style='color:white' href=logout.php>Logout</a>";
+			}
+		else if(isset($_SESSION['sellername']))
+		{
+		echo "Welcome ";
+						echo $_SESSION['sellername'];
 						echo ',';
 						echo "<a style='color:white' href=logout.php>Logout</a>";
-							}else{
-							echo "<a style='color:white' href=login.php>Login</a>";
-					} ?> </li>
-												   
-					<div class="clear"></div>
+			
+		}	
+		else {
+			echo "<a style='color:white' href=login.php>Login</a>";
+			} ?> </li> 
 				</ul>
 		</div>	
 		<div class="web_search">
 		 	<form action="SearchResult.php" method="post" id="searchForm">
-                  <input type="text" name="q" id="searchbox" placeholder="Search here for anything" maxlength="25" >
+                  <input type="text" name="q" id="searchbox" placeholder="Search Anything' " maxlength="25" >
                   <button type="submit" >Go!<span class="fa fa-search"></span></button>
                 </form>
 	    </div>						
@@ -195,6 +197,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
 			
 			
 				?>
+		
 			</ul>
 			
               
@@ -210,6 +213,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
   <!-- / menu -->
     
   <!-- Products section -->
+  <div id="site">
   <section id="aa-product">
     <div class="container">
       <div class="row">
@@ -221,7 +225,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
 			<div id="sidebar">
 			  <!-- Search -->
 			  <div class="box search">
-				<h2>Filter by <span></span></h2>
+				<h2>Filter by  <span></span></h2>
 				<div class="box-content">
 				  <form action="SearchResult.php" method="post">
 					<label>Keyword</label>
@@ -229,8 +233,6 @@ $i= $_GET["clicked"]; //Or do whatever you want
 					
 					<label>Item Name</label>
 					<input type="text" name="item" class="field" />
-					
-					
 					
 					
 							
@@ -242,7 +244,8 @@ $i= $_GET["clicked"]; //Or do whatever you want
 			
 			
 			
-			<div class="aa-product-inner">
+			
+              <div class="aa-product-inner">
                 <!-- start prduct navigation -->
                  <br>
                   <!-- Tab panes -->
@@ -255,27 +258,31 @@ $i= $_GET["clicked"]; //Or do whatever you want
                         
                         <!-- start single product item -->
                         <?php
-						$query=mysqli_query($conn,"Select * FROM Inventory WHERE Category LIKE '%$i%' OR SubCategory LIKE '%$i%'");
+						$query=mysqli_query($conn,"Select * FROM Inventory");
 						$num_rows=mysqli_num_rows($query);
+
 						while ($row=mysqli_fetch_array($query))
 						{
 							$prodname=$row['ProductName'];
 							$image=$row['ImageLink'];
 							$ItemId=$row['ItemId'];
-							$desc=$row['Description'];
 							$url1='Prod_Desc.php';
 							$url1 .= "?" . 'itemid' . "=" . $ItemId;
 							
-							?>
-<!-- change Here -->		<li>
-								
-									
 							
-									<div class="product-description" data-name=<?php echo $prodname ?> data-price="<?php echo $priceU ?>">
-										<h3 class="product-name"><?php echo $prodname ?></h3>
-										<a href=<?php echo $url1 ?>><img src=<?php echo $image ?> alt="" /></a>
-										
-										<p class="product-desc"> <?php echo $desc ?></p>
+							
+							
+						
+														
+							
+?>
+			             <li >
+						 
+								<div class="product-image" >
+									<a href=<?php echo $url1 ?>><img src=<?php echo $image ?> alt="" /></a>
+								</div>
+									<div class="product-description" data-name=<?php echo $prodname ?> >
+										<h3 class="product-name"><?php echo $prodname  ?></h3>
 									</div>                       
                           
                           </li>
@@ -287,7 +294,6 @@ $i= $_GET["clicked"]; //Or do whatever you want
                       </ul>
                       <a class="aa-browse-btn" href="Search.php">Browse all Product <span class="fa fa-long-arrow-right"></span></a>
                     </div>
-             
                     
                             
                      
@@ -299,9 +305,11 @@ $i= $_GET["clicked"]; //Or do whatever you want
       </div>
     </div>
   </section>
-  <div>
+  </div>
+  </div>
   
-<footer id="aa-footer">
+  <!-- footer -->  
+  <footer id="aa-footer">
     <!-- footer bottom -->
     <div class="aa-footer-top">
      <div class="container">
@@ -319,8 +327,8 @@ $i= $_GET["clicked"]; //Or do whatever you want
                   <div class="aa-footer-widget">
                     <h3>Useful Links</h3>
                     <ul class="aa-footer-nav">
-                      <li><a href="index.php">Home</a></li>
-                                            
+                      <li><a href="landing.php">Home</a></li>
+                    
                       
                     </ul>
                   </div>
@@ -333,7 +341,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
                     <h3>Contact Us</h3>
                     <address>
                       <p> 107 S Indiana Ave, Bloomington, IN 47405</p>
-                      <p><span class="fa fa-phone"></span>+1 812-955-1456</p>
+                      <p><span class="fa fa-phone"></span>+1 812-349-8724</p>
                       <p><span class="fa fa-envelope"></span>everythingIndian@gmail.com</p>
                     </address>
                     
@@ -352,7 +360,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Myrmidons</a></p>
+            <p>Designed by Group 1</a></p>
             
           </div>
         </div>
@@ -361,7 +369,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
     </div>
   </footer>
   <!-- / footer -->
-
+ 
   
 
   <!-- jQuery library -->

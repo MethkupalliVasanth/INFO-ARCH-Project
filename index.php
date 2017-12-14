@@ -183,7 +183,6 @@ session_start();
 			
 			
 				?>
-				<li><a href="customer-support.php">Customer Support</a></li>
 			</ul>
 			
               
@@ -286,8 +285,7 @@ function nextSlide() {
 }
 </script>
 	
-<img src="images1/brands.jpg" style="display:block; margin: 0 auto;" >
-  <a href="Search.php" style="text-align: center"><h2 id="intro"><Strong>Shop Now for Best deals and Free and Fast delievery</strong><h2></a>
+
  
 	<footer id="aa-footer">
     <!-- footer bottom -->
@@ -308,8 +306,7 @@ function nextSlide() {
                     <h3>Useful Links</h3>
                     <ul class="aa-footer-nav">
                       <li><a href="index.php">Home</a></li>
-                                            
-                      <li><a href="customer-support.php">Customer Support</a></li>
+                                          
                       
                     </ul>
                   </div>

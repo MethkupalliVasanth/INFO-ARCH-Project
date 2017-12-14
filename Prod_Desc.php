@@ -123,15 +123,7 @@
 		
 		echo ',';
 		echo "<a style='color:white' href=logout.php>Logout</a>";
-			}
-		else if(isset($_SESSION['sellername']))
-		{
-		echo "Welcome ";
-						echo $_SESSION['sellername'];
-						echo ',';
-						echo "<a style='color:white' href=logout.php>Logout</a>";
-			
-		}	
+			}	
 		else {
 			echo "<a style='color:white' href=login.php>Login</a>";
 			} ?> </li> 
@@ -212,7 +204,6 @@
 			
 			
 				?>
-				<li><a href="customer-support.php">Customer Support</a></li>
 			</ul>
 			
               
@@ -298,10 +289,7 @@
                   <div class="aa-footer-widget">
                     <h3>Useful Links</h3>
                     <ul class="aa-footer-nav">
-                      <li><a href="index.php">Home</a></li>
-                                            
-                      <li><a href="customer-support.php">Customer Support</a></li>
-                      
+                      <li><a href="index.php">Home</a></li>                     
                     </ul>
                   </div>
                 </div>
