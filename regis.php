@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
       
-    <title>StayBeautiful | Home</title>
+    <title>EverythingIndian | Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Bootstrap core CSS -->
@@ -16,7 +16,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
       
-    <title>StayBeautiful | Home</title>
+    <title>EverythingIndian | Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Bootstrap core CSS -->
@@ -272,7 +272,6 @@ $('#form_members').bootstrapValidator();
                       <li><a href="#">Home</a></li>
                       <li><a href="#">Search</a></li>
                       
-                      <li><a href="#">Customer Support</a></li>
                       
                     </ul>
                   </div>
@@ -285,8 +284,8 @@ $('#form_members').bootstrapValidator();
                     <h3>Contact Us</h3>
                     <address>
                       <p> 107 S Indiana Ave, Bloomington, IN 47405</p>
-                      <p><span class="fa fa-phone"></span>+1 812-349-8724</p>
-                      <p><span class="fa fa-envelope"></span>staybeautiful@gmail.com</p>
+                      <p><span class="fa fa-phone"></span>+1 812-955-1456</p>
+                      <p><span class="fa fa-envelope"></span>everythingIndian@gmail.com</p>
                     </address>
                     
                   </div>
@@ -304,7 +303,7 @@ $('#form_members').bootstrapValidator();
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Group 1</a></p>
+            <p>Designed by Group 8</a></p>
             
           </div>
         </div>

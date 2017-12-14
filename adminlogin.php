@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>StayBeautiful| Login</title>
+        <title>EverythingIndian| Login</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -165,7 +165,6 @@
                     <ul class="aa-footer-nav">
                       <li><a href="index.php">Home</a></li>
                                             
-                      <li><a href="customer-support.php">Customer Support</a></li>
                       
                     </ul>
                   </div>
@@ -197,7 +196,7 @@
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Myrmidons</a></p>
+            <p>Designed by Group 8</a></p>
             
           </div>
         </div>

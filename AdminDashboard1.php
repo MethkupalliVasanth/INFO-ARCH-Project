@@ -25,7 +25,7 @@ session_start();
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>StayBeautiful | Home</title>
+<title>EverythingIndian | Home</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
@@ -109,7 +109,7 @@ session_start();
 		</div>	
 		<div class="web_search">
 		 	<form action="SSearchResult.php" method="post" id="searchForm">
-                  <input type="text" name="q" id="searchbox" placeholder="Search here ex. 'MakeUp' " maxlength="25" >
+                  <input type="text" name="q" id="searchbox" placeholder="Search Anything' " maxlength="25" >
                   <button type="submit" >Go!<span class="fa fa-search"></span></button>
                 </form>
 	    </div>						
@@ -182,7 +182,7 @@ session_start();
 			
 			
 				?>
-				<li><a href="customer-support.php">Customer Support</a></li>
+				
 			</ul>
 			
               

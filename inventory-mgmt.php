@@ -378,7 +378,7 @@ session_start();
                     <ul class="aa-footer-nav">
                       <li><a href="landing.htm">Home</a></li>
                                           
-                      <li><a href="customer-support.html">Customer Support</a></li>
+ 
                       
                     </ul>
                   </div>
@@ -391,8 +391,8 @@ session_start();
                     <h3>Contact Us</h3>
                     <address>
                       <p> 107 S Indiana Ave, Bloomington, IN 47405</p>
-                      <p><span class="fa fa-phone"></span>+1 812-349-8724</p>
-                      <p><span class="fa fa-envelope"></span>staybeautiful@gmail.com</p>
+                      <p><span class="fa fa-phone"></span>+1 812-955-1456</p>
+                      <p><span class="fa fa-envelope"></span>everythingIndian@gmail.com</p>
                     </address>
                     
                   </div>
@@ -410,7 +410,7 @@ session_start();
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Group 1</a></p>
+            <p>Designed by Group 8</a></p>
             
           </div>
         </div>

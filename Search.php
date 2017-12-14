@@ -32,7 +32,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>StayBeautiful | Home</title>
+    <title>EverythingIndian | Home</title>
     
     
     <!-- Bootstrap -->
@@ -341,7 +341,7 @@
                     <h3>Contact Us</h3>
                     <address>
                       <p> 107 S Indiana Ave, Bloomington, IN 47405</p>
-                      <p><span class="fa fa-phone"></span>+1 812-349-8724</p>
+                      <p><span class="fa fa-phone"></span>+1 812-955-1456</p>
                       <p><span class="fa fa-envelope"></span>everythingIndian@gmail.com</p>
                     </address>
                     
@@ -360,7 +360,7 @@
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by Group 1</a></p>
+            <p>Designed by Group 8</a></p>
             
           </div>
         </div>
