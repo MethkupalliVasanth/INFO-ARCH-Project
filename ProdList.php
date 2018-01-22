@@ -57,7 +57,7 @@
     
 
 	<link href="css1/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css1/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css1/style2.css" rel="stylesheet" type="text/css" media="all" />
 	<!--- start-mmmenu-script---->
 	<script src="js1/jquery.min.js" type="text/javascript"></script>
 	<link type="text/css" rel="stylesheet" href="css1/jquery.mmenu.all.css" />
@@ -262,7 +262,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
 							$prodname=$row['ProductName'];
 							$image=$row['ImageLink'];
 							$ItemId=$row['ItemId'];
-							$desc=$row['Description'];
+							$desc=$row['desc_small'];
 							$url1='Prod_Desc.php';
 							$url1 .= "?" . 'itemid' . "=" . $ItemId;
 							
@@ -273,7 +273,7 @@ $i= $_GET["clicked"]; //Or do whatever you want
 							
 									<div class="product-description" data-name=<?php echo $prodname ?> data-price="<?php echo $priceU ?>">
 										<h3 class="product-name"><?php echo $prodname ?></h3>
-										<a href=<?php echo $url1 ?>><img src=<?php echo $image ?> alt="" /></a>
+										<a href=<?php echo $url1 ?>><img width="100%" height="100%" src=<?php echo $image ?> alt="" /></a>
 										
 										<p class="product-desc"> <?php echo $desc ?></p>
 									</div>                       

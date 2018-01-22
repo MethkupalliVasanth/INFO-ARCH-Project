@@ -89,7 +89,7 @@ session_start();
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.php"><img src="images1/logo.png" alt="" height=125px width=150px;/></a>
+			<a href="index.php"><img src="images1/logo.jpg" alt="" height=125px width=150px;/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
@@ -248,15 +248,15 @@ session_start();
 	
 	<div class="image1_of_3">
 		<img src="images1/butterchicken.jpg" alt=""/>
-	    <a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=1"><span class="tag">North Indian</span></a>
+	    <a href="http://localhost/everythingindian/ProdList.php?clicked=NorthIndian"><span class="tag">North Indian</span></a>
 	</div>
 	<div class="image1_of_3">
 		<img src="images1/dosa.jpg" alt=""/>
-		<a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=2"><span class="tag"> South Indian</span></a>
+		<a href="http://localhost/everythingindian/ProdList.php?clicked=SouthIndian"><span class="tag"> South Indian</span></a>
 	</div>
 	<div class="image1_of_3">
 		<img src="images1/vadapav.jpg" alt=""/>
-		<a href="http://localhost/StayBeautiful/Prod_Desc.php?itemid=3"><span class="tag">Far West</span></a>
+		<a href="http://localhost/everythingindian/ProdList.php?clicked=WestIndian"><span class="tag">Far West</span></a>
 	</div>
 	<div class="clear"></div>
 </div>
@@ -265,11 +265,11 @@ session_start();
 
 
     <ul id="slides">
-	<li class="slide"><img src="images1/carousel/8.jpg" width="100%" height="600" ></li>
-    <li class="slide"><img src="images1/carousel/9.jpg" width="100%" height="600"></li>
-    <li class="slide"><img src="images1/carousel/10.jpg" width="100%" height="600"></li>
-    <li class="slide"><img src="images1/carousel/11.jpg" width="100%" height="600"></li>
-    <li class="slide"><img src="images1/carousel/12.jpg" width="100%" height="600"></li>
+	<li class="slide"><img src="images1/carousel/8.jpg" width="100%" height="100%" ></li>
+    <li class="slide"><img src="images1/carousel/9.jpg" width="100%" height="100%"></li>
+    <li class="slide"><img src="images1/carousel/10.jpg" width="100%" height="100%"></li>
+    <li class="slide"><img src="images1/carousel/11.jpg" width="100%" height="100%"></li>
+    <li class="slide"><img src="images1/carousel/12.jpg" width="100%" height="100%"></li>
 
 	
 	</ul>
@@ -285,9 +285,8 @@ function nextSlide() {
 }
 </script>
 	
-
- 
-	<footer id="aa-footer">
+  
+<footer id="aa-footer">
     <!-- footer bottom -->
     <div class="aa-footer-top">
      <div class="container">
@@ -306,7 +305,7 @@ function nextSlide() {
                     <h3>Useful Links</h3>
                     <ul class="aa-footer-nav">
                       <li><a href="index.php">Home</a></li>
-                                          
+                                            
                       
                     </ul>
                   </div>
@@ -347,7 +346,6 @@ function nextSlide() {
     </div>
   </footer>
   <!-- / footer -->
-
 
 <script type="text/javascript" src="js1/jquery.smartmenus.js"></script>
 <script type="text/javascript" src="js1/jquery.smartmenus.bootstrap.js"></script> 

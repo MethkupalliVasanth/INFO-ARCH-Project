@@ -131,7 +131,7 @@
 		</div>	
 		<div class="web_search">
 		 	<form action="SearchResult.php" method="post" id="searchForm">
-                  <input type="text" name="q" id="searchbox" placeholder="Search here ex. 'MakeUp' " maxlength="25" >
+                  <input type="text" name="q" id="searchbox" placeholder="Search here ex. 'Chicken' " maxlength="25" >
                   <button type="submit" >Go!<span class="fa fa-search"></span></button>
                 </form>
 	    </div>						
